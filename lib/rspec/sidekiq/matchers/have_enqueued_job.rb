@@ -26,7 +26,7 @@ module RSpec
 
         def at_evaluator(value)
           return false if job['at'].to_s.empty?
-          value.to_time.to_s == Time.at(job['at']).to_s
+          value.to_time == Time.at(job['at'])
         end
 
         def in_evaluator(value)
